@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+    <button class="btn btn-primary mb-4" (click)="goBack()">Back</button>
+    
+    <h2 class="mb-4">Problems for {{ selectedTopic.topicTitle }} [{{ selectedTopic.level }}]</h2>
+    
+    <div *ngFor="let problem of selectedTopic.problems" class="card mb-3">
+        <div class="card-header d-flex justify-content-between">
+            <span>{{ problem.problemTitle }}</span>
+            <input type="checkbox" [checked]="problem.isCompleted" (change)="onCheckboxChange(problem)">
+        </div>
+        <div class="card-body">
+            <p><strong>YouTube:</strong> <a [href]="problem.youtubeLink" target="_blank">Watch</a></p>
+            <p><strong>LeetCode:</strong> <a [href]="problem.leetcodeLink" target="_blank">Solve</a></p>
+            <p><strong>Article:</strong> <a [href]="problem.articleLink" target="_blank">Read</a></p>
+        </div>
+    </div>
+</div>

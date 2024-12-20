@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+    <h2 class="mb-4">DSA Sheet</h2>
+    
+    <div class="row">
+        <div *ngFor="let topic of topics" class="col-md-3 mb-3">
+            <div class="card" (click)="viewTopicDetails(topic)">
+                <div class="card-header d-flex justify-content-between" [ngClass]="getLevelClass(topic.level)">
+                    <span><strong>{{ topic.topicTitle }}</strong> [{{ topic.level }}]</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>Description:</strong> {{ topic.topicDescription }}</p>
+                    <p [ngClass]="getStatusClass(topic.isCompleted)">
+                        <strong>Status: </strong> 
+                        {{ topic.isCompleted ? 'Completed' : 'Not Completed' }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

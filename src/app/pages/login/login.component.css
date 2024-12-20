@@ -1,0 +1,11 @@
+.card {
+    max-width: 400px;
+    width: 100%;
+}
+
+.bg-image {
+    background-image: url('../../../assets/images.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}

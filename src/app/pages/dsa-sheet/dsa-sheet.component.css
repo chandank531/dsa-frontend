@@ -1,0 +1,60 @@
+.bg-success {
+    background-color: #28a745 !important;
+  }
+  
+  .bg-warning {
+    background-color: #ffc107 !important;
+  }
+  
+  .bg-danger {
+    background-color: #dc3545 !important;
+  }
+  
+  .text-white {
+    color: white !important;
+  }
+  
+  .text-dark {
+    color: #212529 !important;
+  }
+  
+
+.card-body p {
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
+  margin-left: -15px; 
+  margin-right: -15px; 
+}
+
+.col-md-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.completed {
+  color: green;
+  font-weight: bold;
+}
+  
+.not-completed {
+  color: red;
+  font-weight: bold;
+}
+  
